@@ -1,5 +1,4 @@
 import time
-import pprint
 import json
 import requests
 import urllib.request
@@ -15,10 +14,12 @@ def setup():
     except:
         station_status = get_station_status()
         with open('last_updated.txt', 'a') as workfile:
-            workfile.write(str(station_status['last_updated']))
+            workfile.write('\n')
+            workfile.write(str(int(station_status['last_updated'])))
         for station in station_status['data']['stations']:
             file_name = station['station_id'] + '.txt'
             with open(file_name, 'a') as workfile:
+                workfile.write('\n')
                 workfile.write(json.dumps(station))
 
 def get_station_status():
@@ -33,13 +34,14 @@ def update_station_logs(station_status):
     # write the dict to the file
     # otherwise do nothing
     with open('last_updated.txt', 'a') as workfile:
-        workfile.write(str(station_status['last_updated']))
+        workfile.write('\n')
+        workfile.write(str(int(station_status['last_updated'])))
     for station in station_status['data']['stations']:
-        print(station['station_id'])
         file_name = station['station_id'] + '.txt'
         last_line = json.loads(get_last_line(file_name))
         if last_line['last_reported'] < station['last_reported']:
             with open(file_name, 'a') as workfile:
+                workfile.write('\n')
                 workfile.write(json.dumps(station))
 
 def get_last_line(file_name):
@@ -48,12 +50,12 @@ def get_last_line(file_name):
         while readfile.read(1) != b'\n':
             readfile.seek(-2, 1)
         last_line = readfile.readline()
-    return last_line
+    return last_line.decode("utf-8")
 
 if __name__ == "__main__":
     print("Starting logging!")
     setup()
     while True:
         if time.time() % 60 == 0:
-            print(time.time())
+            print(int(time.time()))
             update_station_logs(get_station_status())

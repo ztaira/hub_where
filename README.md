@@ -5,8 +5,8 @@ Reason: I am a Hubway customer, and would like to know when the stations I
 frequent are usually low on bikes.
 
 I'll be leaving this script running on my laptop for as much time as possible
-over the next week or so, so I'll have interesting data set to do fun things
-with..
+over the next week or so. After that, I'll have interesting data set to do fun 
+things with.
 
 ### Usage:
 - Use `python hub_where.py` to run the hub\_where.py file
@@ -17,7 +17,7 @@ with..
 - Shortens dict keys in order to save space
 
 ### What it does:
-- If `last_updated.txt` file does not exist, creates last\_updated.txt as well
+- If `last_updated.txt` file does not exist, creates `last_updated.txt` as well
     as log files for each station
 - Checks every 60 seconds if the data has been updated
 - If the data has been updated, log any new data in the station log files
@@ -34,4 +34,4 @@ with..
 - last_updated.txt...........Text file to hold epoch time stamps
 ```
 ### Example Output:
-
+See data directory.

@@ -48,7 +48,7 @@ def update_station_logs(station_status):
     for station in station_status['data']['stations']:
         file_name = 'data/' + station['station_id'] + '.txt'
         last_line = json.loads(get_last_line(file_name))
-        if last_line['last_reported'] < station['last_reported']:
+        if last_line['l_r'] < station['last_reported']:
             with open(file_name, 'a') as workfile:
                 workfile.write('\n')
                 station = shorten_dict(station)

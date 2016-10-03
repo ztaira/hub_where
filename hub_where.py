@@ -20,8 +20,8 @@ def setup():
             workfile.write('\n')
             workfile.write(str(int(station_status['last_updated'])))
         for station in station_status['data']['stations']:
-            file_name = station['station_id'] + '.txt'
-            with open('data/'+file_name, 'a') as workfile:
+            file_name = 'data/' + station['station_id'] + '.txt'
+            with open(file_name, 'a') as workfile:
                 workfile.write('\n')
                 station = shorten_dict(station)
                 workfile.write(json.dumps(station))
@@ -46,10 +46,10 @@ def update_station_logs(station_status):
     # if the log's last_reported time < the station's last reported time:
     # log the station's information to file
     for station in station_status['data']['stations']:
-        file_name = station['station_id'] + '.txt'
+        file_name = 'data/' + station['station_id'] + '.txt'
         last_line = json.loads(get_last_line(file_name))
         if last_line['last_reported'] < station['last_reported']:
-            with open('data/'+file_name, 'a') as workfile:
+            with open(file_name, 'a') as workfile:
                 workfile.write('\n')
                 station = shorten_dict(station)
                 workfile.write(json.dumps(station))
@@ -57,7 +57,7 @@ def update_station_logs(station_status):
 
 def get_last_line(file_name):
     """Function to return the last line of a given text file as a string."""
-    with open('data/'+file_name, 'rb') as readfile:
+    with open(file_name, 'rb') as readfile:
         readfile.seek(-2, 2)
         while readfile.read(1) != b'\n':
             readfile.seek(-2, 1)

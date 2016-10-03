@@ -30,8 +30,8 @@ things with.
 ```
 - README.md..................This readme file
 - hub_where.py...............Python script to gather data from Hubway
-- data/......................Data gathered from Hubway
 - last_updated.txt...........Text file to hold epoch time stamps
+- data/......................Data gathered from Hubway
 ```
 ### Example Output:
 See data directory.

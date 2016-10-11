@@ -234,3 +234,14 @@
 {"n_b_d": 1, "n_b_a": 3, "n_d_a": 11, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476128108"}
 {"n_b_d": 1, "n_b_a": 4, "n_d_a": 10, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476129127"}
 {"n_b_d": 1, "n_b_a": 2, "n_d_a": 12, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476131150"}
+{"n_b_d": 1, "n_b_a": 3, "n_d_a": 11, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476134658"}
+{"n_b_d": 1, "n_b_a": 4, "n_d_a": 10, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476135886"}
+{"n_b_d": 1, "n_b_a": 5, "n_d_a": 9, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476137541"}
+{"n_b_d": 1, "n_b_a": 6, "n_d_a": 8, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476137677"}
+{"n_b_d": 1, "n_b_a": 7, "n_d_a": 7, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476138583"}
+{"n_b_d": 1, "n_b_a": 8, "n_d_a": 6, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476140454"}
+{"n_b_d": 1, "n_b_a": 8, "n_d_a": 6, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476142068"}
+{"n_b_d": 1, "n_b_a": 7, "n_d_a": 7, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476142076"}
+{"n_b_d": 1, "n_b_a": 8, "n_d_a": 6, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476144895"}
+{"n_b_d": 1, "n_b_a": 9, "n_d_a": 5, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476146848"}
+{"n_b_d": 1, "n_b_a": 8, "n_d_a": 6, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "8", "l_r": "1476151179"}

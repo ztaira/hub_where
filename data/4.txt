@@ -381,3 +381,16 @@
 {"n_b_d": 0, "n_b_a": 2, "n_d_a": 13, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476131587"}
 {"n_b_d": 0, "n_b_a": 3, "n_d_a": 12, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476131723"}
 {"n_b_d": 0, "n_b_a": 4, "n_d_a": 11, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476132453"}
+{"n_b_d": 0, "n_b_a": 3, "n_d_a": 12, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476135110"}
+{"n_b_d": 0, "n_b_a": 5, "n_d_a": 10, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476135364"}
+{"n_b_d": 0, "n_b_a": 6, "n_d_a": 9, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476136972"}
+{"n_b_d": 0, "n_b_a": 7, "n_d_a": 8, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476137092"}
+{"n_b_d": 0, "n_b_a": 8, "n_d_a": 7, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476137464"}
+{"n_b_d": 0, "n_b_a": 7, "n_d_a": 8, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476137642"}
+{"n_b_d": 0, "n_b_a": 8, "n_d_a": 7, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476137765"}
+{"n_b_d": 0, "n_b_a": 9, "n_d_a": 6, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476139514"}
+{"n_b_d": 0, "n_b_a": 10, "n_d_a": 5, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476140776"}
+{"n_b_d": 0, "n_b_a": 11, "n_d_a": 4, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476143454"}
+{"n_b_d": 0, "n_b_a": 12, "n_d_a": 3, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476143518"}
+{"n_b_d": 0, "n_b_a": 11, "n_d_a": 4, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476147763"}
+{"n_b_d": 0, "n_b_a": 13, "n_d_a": 2, "i_i": 1, "i_ret": 1, "e_h_a_k": false, "n_d_d": 0, "i_ren": 1, "s_i": "4", "l_r": "1476152486"}

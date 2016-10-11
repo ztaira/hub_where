@@ -48,7 +48,7 @@ def get_single_station_occupancy(station_number, array_length):
                     value = line['n_b_a'] / (line['n_b_a'] + line['n_d_a'])
                 if (index < 0):
                     # print("Line, index, value:", line_counter, index, value)
-                    # print("Station, index:", station_number, index)
+                    print("Station, index:", station_number, index)
                     index = 0
                 single_station_occupancy_array[0][index] = value
                 line_counter += 1

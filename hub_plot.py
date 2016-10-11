@@ -18,7 +18,7 @@ def get_station_occupancy_array():
     time_interval = get_time_interval()
     time_interval = time_interval[1] - time_interval[0]
     time_interval = int(time_interval/10) + 1
-    station_occupancy_array = np.empty((1, time_interval))
+    station_occupancy_array = np.zeros((1, time_interval))
     # cumulative_size = 0
     # print("Shape of master:", station_occupancy_array.shape)
     for station_number in range(1, 219):
@@ -31,10 +31,9 @@ def get_station_occupancy_array():
 def get_single_station_occupancy(station_number, array_length):
     """Gets how full one station is over time"""
     file_name = 'data/' + str(station_number) + '.txt'
-    single_station_occupancy_array = np.empty((1, array_length))
+    single_station_occupancy_array = np.full((1, array_length), 2)
     time_interval = get_time_interval()
     line_counter = 1
-    # print("Shape of ", station_number, single_station_occupancy_array.shape)
     try:
         with open(file_name, 'r') as readfile:
             firstline = readfile.readline()
@@ -47,15 +46,16 @@ def get_single_station_occupancy(station_number, array_length):
                 else:
                     value = line['n_b_a'] / (line['n_b_a'] + line['n_d_a'])
                 if (index < 0):
-                    # print("Line, index, value:", line_counter, index, value)
-                    print("Station, index:", station_number, index)
                     index = 0
+                # print("Line, index, value:", line_counter, index, value)
                 single_station_occupancy_array[0][index] = value
                 line_counter += 1
     except FileNotFoundError:
         pass
-    # print("Size of station array is", single_station_occupancy_array.nbytes)
-    # print("Returned data for station:", station_number, "\n")
+    for index in range(len(single_station_occupancy_array)):
+        if single_station_occupancy_array[0][index] == 2:
+            single_station_occupancy_array[0][index] = single_station_occupancy_array[0][index-1]
+    print("Returned data for station:", station_number, "\n")
     return single_station_occupancy_array
 
 def get_time_interval():
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     # station_coords = parse_station_coordinates(station_info)
     # plot_station_locations(station_coords)
     station_occupancy_array = get_station_occupancy_array()
-    # print("Shape of final:", station_occupancy_array.shape)
+    print("Shape of final:", station_occupancy_array.shape)

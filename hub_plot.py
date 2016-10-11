@@ -20,7 +20,7 @@ def get_station_occupancy_array():
     time_interval = int(time_interval/10) + 1
     station_occupancy_array = np.empty((1, time_interval))
     # cumulative_size = 0
-    print("Shape of master:", station_occupancy_array.shape)
+    # print("Shape of master:", station_occupancy_array.shape)
     for station_number in range(1, 219):
         station_occupancy_array = np.vstack((station_occupancy_array, get_single_station_occupancy(station_number, time_interval)))
         # new_station_occupancy_array = get_single_station_occupancy(station_number, time_interval)
@@ -34,7 +34,7 @@ def get_single_station_occupancy(station_number, array_length):
     single_station_occupancy_array = np.empty((1, array_length))
     time_interval = get_time_interval()
     line_counter = 1
-    print("Shape of ", station_number, single_station_occupancy_array.shape)
+    # print("Shape of ", station_number, single_station_occupancy_array.shape)
     try:
         with open(file_name, 'r') as readfile:
             firstline = readfile.readline()
@@ -46,13 +46,16 @@ def get_single_station_occupancy(station_number, array_length):
                     value = 0
                 else:
                     value = line['n_b_a'] / (line['n_b_a'] + line['n_d_a'])
-                # print("Line, index, value:", line_counter, index, value)
+                if (index < 0):
+                    # print("Line, index, value:", line_counter, index, value)
+                    # print("Station, index:", station_number, index)
+                    index = 0
                 single_station_occupancy_array[0][index] = value
                 line_counter += 1
     except FileNotFoundError:
         pass
-    print("Size of station array is", single_station_occupancy_array.nbytes)
-    print("Returned data for station:", station_number, "\n")
+    # print("Size of station array is", single_station_occupancy_array.nbytes)
+    # print("Returned data for station:", station_number, "\n")
     return single_station_occupancy_array
 
 def get_time_interval():
@@ -91,4 +94,5 @@ if __name__ == "__main__":
     # station_info = get_station_info()
     # station_coords = parse_station_coordinates(station_info)
     # plot_station_locations(station_coords)
-    print("Shape of final:", get_station_occupancy_array().shape)
+    station_occupancy_array = get_station_occupancy_array()
+    # print("Shape of final:", station_occupancy_array.shape)

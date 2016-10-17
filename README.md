@@ -66,4 +66,4 @@ Interesting Tidbit 2: Despite having vastly different amounts of activity, there
 were no stations that remained empty or full throughout the entire week.
 
 ![alt text][outputimage2]
-[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1occupancy_by_color_and_size.png "Occupancy by color and size"
+[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size"

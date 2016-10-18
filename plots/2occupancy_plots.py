@@ -152,6 +152,7 @@ if __name__ == "__main__":
     station_coords = parse_station_coordinates(station_info)
     station_occupancy_array = get_station_occupancy_array()
     station_occupancies = get_station_averages(station_occupancy_array)
-    for item in range(len(station_occupancies)):
-        print(item, station_occupancies[item])
+    with open('average_occupancies.txt', 'w') as writefile:
+        for item in range(len(station_occupancies)):
+            writefile.write(str(station_coords[0][item]) + ":" + str(station_occupancies[item]) + '\n')
     plot_station_locations_and_occupancy(station_coords, station_occupancies)

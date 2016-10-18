@@ -50,6 +50,8 @@ and plots it by size, color, and both
 ```
 ### Output:
 
+### Hubway Stations plotted by GPS Coordinates and Activity
+
 Interesting Tidbit 1: According to log size, station 65 was by far the most
 active. It had 2380 lines of log data. The second most active was station 134,
 with 1600 lines of text, and the third most active was station 67 with 1588
@@ -61,6 +63,8 @@ the station by MIT's famous Alchemist statue at the end of the Smoot Bridge.
 
 ![alt text][outputimage]
 [outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.png "Activity by color and size"
+
+### Hubway Stations Plotted by Average Occupancy from 10/3/16 to 10/10/16
 
 Interesting Tidbit 2: Despite having vastly different amounts of activity, there
 were no stations that remained empty or full throughout the entire week. Most

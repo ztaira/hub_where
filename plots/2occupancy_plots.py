@@ -16,7 +16,7 @@ def get_station_info():
 def parse_station_coordinates(station_info):
     """Takes the station info and returns a list of [id, lat, lon] for each
     station"""
-    station_coords = [[],[],[]]
+    station_coords = [[], [], []]
     for station in station_info['data']['stations']:
         station_coords[0].append(station['station_id'])
         station_coords[1].append(station['lat'])
@@ -53,7 +53,7 @@ def get_time_interval():
     """Function to get the time interval where data was collected from
     last_updated.txt"""
     with open('../last_updated.txt', 'rb') as readfile:
-        empty_line = readfile.readline()
+        readfile.readline()
         first_line = readfile.readline()
         readfile.seek(-2, 2)
         while readfile.read(1) != b'\n':
@@ -70,12 +70,12 @@ def get_single_station_occupancy(station_number, array_length):
     line_counter = 1
     try:
         with open(file_name, 'r') as readfile:
-            firstline = readfile.readline()
+            readfile.readline()
             for next_line in readfile:
                 line = json.loads(next_line)
                 index = int(line['l_r']) - time_interval[0]
                 index = int(index/10)
-                if (line['n_b_a'] + line['n_d_a']) == 0:
+                if line['n_b_a'] + line['n_d_a'] == 0:
                     value = 0
                 else:
                     value = line['n_b_a'] / (line['n_b_a'] + line['n_d_a'])

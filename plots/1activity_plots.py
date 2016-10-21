@@ -1,4 +1,5 @@
-import json
+"""Script to plot data by GPS coordinates and log size"""
+
 import requests
 import numpy as np
 import matplotlib.cm as cm
@@ -36,7 +37,7 @@ def get_file_length(station_number):
 def parse_station_coordinates(station_info):
     """Takes the station info and returns a list of [id, lat, lon] for each
     station"""
-    station_coords = [[],[],[]]
+    station_coords = [[], [], []]
     for station in station_info['data']['stations']:
         station_coords[0].append(station['station_id'])
         station_coords[1].append(station['lat'])

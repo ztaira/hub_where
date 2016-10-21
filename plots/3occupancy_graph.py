@@ -1,6 +1,5 @@
 """Script to plot Hubway station occupancy data"""
 
-import json
 import matplotlib.pyplot as plt
 
 def plot_occupancy(occupancy_data):
@@ -18,7 +17,7 @@ def get_occupancy_data():
     """Gets the occupancy data"""
     # first index is list of station numbers
     # second index is list of average occupancies
-    occupancy_data = [[],[]]
+    occupancy_data = [[], []]
     with open('average_occupancies.txt', 'r') as readfile:
         for line in readfile:
             newline = line.split(':')

@@ -70,7 +70,9 @@ through the center of all the Hubway stations.
 
 Despite having vastly different amounts of activity, there were no stations
 that remained empty or full throughout the entire week. Most of them were
-about 20% to 70% full at any given time.  
+about 20% to 70% full at any given time. If you look at the plot, though,
+the stations in terms of average occupancy are extremely close together
+relative to the amount of activity each one gets.
 
 On average, the least occupied Hubway areas are on the MIT side of the Charles,
 by the Boston's Children's Museum, and by the Boston's Children's Hospital/Harvard

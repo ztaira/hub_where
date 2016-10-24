@@ -1,6 +1,7 @@
 """Script to plot Hubway station data"""
 
 import json
+import time
 import requests
 import numpy as np
 import matplotlib.pyplot as plt
@@ -88,74 +89,56 @@ def get_single_station_occupancy(station_number, array_length):
     print("Returned data for station:", station_number, "\n")
     return single_station_occupancy_array
 
+def get_station_hourly_average(station_occupancy_array):
+    """Gets the averages for all the stations and returns an array"""
+    averages_array = np.full((1, int(station_occupancy_array.shape[1]/360+1)), 0)
+    for station_num in range(1, 219):
+        averages_array = np.vstack((averages_array, get_single_station_hourly_average(station_occupancy_array, station_num)))
+    return averages_array
 
-def get_station_averages(station_occupancy_array):
-    """Gets how full the stations are on average"""
-    average_list = []
-    counter = 0
-    for station in station_occupancy_array:
-        cumulative_total = 0
-        last_item = 0
-        for item in station:
+def get_single_station_hourly_average(station_occupancy_array, station_num):
+    """Gets the average for one station and returns an array"""
+    end = int(station_occupancy_array.shape[1] / 360 + 1)
+    begin = 0
+    average_array = np.full((1, end), 0)
+    average = 0
+    last_item = 0
+    while begin < end-1:
+        temp = station_occupancy_array[station_num][begin*360: begin*360+360]
+        for item in temp:
             if item <= 1:
-                cumulative_total += item
+                average += item
                 last_item = item
             else:
-                cumulative_total += last_item
-        average = cumulative_total / len(station)
-        average_list.append(average)
-        counter += 1
-        print("Got the average for another station", counter)
-    average_list = [x for x in average_list if x != 0]
-    return average_list
+                average += last_item
+        average_array[0][begin] = average/360
+        # print("Station, Hour, Average", station_num, begin, average/360)
+        begin += 1
+        average = 0
+    return average_array
 
-
-def plot_station_locations_and_occupancy(station_coords, station_occupancies):
-    """Takes a list of station coordinates and plots it"""
-
-    # for size
-    plt.figure()
-    station_occupancies_scaled = [400*x for x in station_occupancies]
-    plt.scatter(station_coords[2], station_coords[1], s=station_occupancies_scaled)
-    plt.title("Hubway Stations by Average Occupancy (Size)")
-    plt.xlabel("Longitude")
-    plt.ylabel("Latitude")
-    plt.ylim(42.25, 42.45)
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_size.pdf')
-
-    # for color:
-    plt.figure()
-    colorline = cm.rainbow(np.linspace(0, 1, 501))
-    station_colormap = [colorline[int(x)] for x in station_occupancies_scaled]
-    plt.scatter(station_coords[2], station_coords[1], s=120, c=station_colormap)
-    plt.title("Hubway Stations by Average Occupancy (Color)")
-    plt.xlabel("Longitude")
-    plt.ylabel("Latitude")
-    plt.ylim(42.25, 42.45)
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_color.pdf')
-
-    # for size and color
-    plt.figure()
-    plt.scatter(station_coords[2], station_coords[1], s=station_occupancies_scaled, c=station_colormap)
-    plt.title("Hubway Stations by Average Occupancy (Size and Color)")
-    plt.xlabel("Longitude")
-    plt.ylabel("Latitude")
-    plt.ylim(42.25, 42.45)
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_color_and_size.pdf')
-
-    plt.show()
+def plot_stations_hourly_average(station_averages, station_coords, time_interval):
+    """Creates a bunch of plots based on the hourly station average"""
+    colorline = cm.rainbow(np.linspace(0, 1, 2001))
+    for index in range(station_averages.shape[1]):
+        plt.figure()
+        average_slice = station_averages[:, index]
+        station_colormap = [colorline[int(2000*x)] for x in average_slice]
+        average_slice = [600 * x for x in average_slice]
+        plt.scatter(station_coords[2], station_coords[1], s=average_slice, c=station_colormap)
+        plt.title(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time_interval[0]+3600*index)))
+        plt.xlim(-71.20, -70.95)
+        plt.ylim(42.25, 42.45)
+        plt.savefig('../diagrams/4_'+str(index)+'.png')
+        plt.close()
+        print("Generated figure:", index)
 
 
 if __name__ == "__main__":
     # To plot station data via GPS coordinates and station occupancy
+    time_interval = get_time_interval()
     station_info = get_station_info()
     station_coords = parse_station_coordinates(station_info)
     station_occupancy_array = get_station_occupancy_array()
-    station_occupancies = get_station_averages(station_occupancy_array)
-    with open('average_occupancies.txt', 'w') as writefile:
-        for item in range(len(station_occupancies)):
-            writefile.write(str(station_coords[0][item]) + ":" + str(station_occupancies[item]) + '\n')
-    plot_station_locations_and_occupancy(station_coords, station_occupancies)
+    station_averages = get_station_hourly_average(station_occupancy_array)
+    plot_stations_hourly_average(station_averages, station_coords, time_interval)

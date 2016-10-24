@@ -52,37 +52,37 @@ and plots it by size, color, and both
 
 ### Hubway Stations plotted by GPS Coordinates and Activity
 
-Interesting Tidbit 1: According to log size, station 65 was by far the most
-active. It had 2380 lines of log data. The second most active was station 134,
-with 1600 lines of text, and the third most active was station 67 with 1588
-lines of text.
+According to log size, station 65 was by far the most active. It had 2380
+lines of log data. The second most active was station 134, with 1600 lines of
+text, and the third most active was station 67 with 1588 lines of text.
 
 Station 65 is right next to the Lawn on the D and the Boston Convention Center.
 Station 134 is right next to Copley in the heart of Boston, and station 67 is
 the station by MIT's famous Alchemist statue at the end of the Smoot Bridge.
 
-Interesting Tidbit 2: If you look carefully, you can see the Charles River's
-outline wandering through the center of all the Hubway stations.
+If you look carefully, you can see the Charles River's outline wandering
+through the center of all the Hubway stations.  
 
 ![alt text][outputimage]
-[outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.png "Activity by color and size"
+[outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.pdf "Activity by color and size"
 
 ### Hubway Stations Plotted by Average Occupancy from 10/3/16 to 10/10/16
 
-Interesting Tidbit 3: Despite having vastly different amounts of activity, there
-were no stations that remained empty or full throughout the entire week. Most
-of them were about 20% to 70% full at any given time.
+Despite having vastly different amounts of activity, there were no stations
+that remained empty or full throughout the entire week. Most of them were
+about 20% to 70% full at any given time.  
 
-Interesting Tidbit 4: On average, the least occupied Hubway areas are on the
-MIT side of the Charles, by the Boston's Children's Museum, and by the Boston's
-Children's Hospital/Harvard Medical School/Massachusetts College of Art and
-Design.  My theory is that people bike TO these places during
-the day and AWAY from these places at night. As a result, the bikes spend more
-time closer to people's homes during the night, which brings up the average
-occupancy.
+On average, the least occupied Hubway areas are on the MIT side of the Charles,
+by the Boston's Children's Museum, and by the Boston's Children's Hospital/Harvard
+Medical School/Massachusetts College of Art and Design. 
+
+In the diagrams directory, there are also additional plots that show an
+hour-by-hour graph of how occupied each Hubway station is. Based on trends
+shown in these graphs, the low-occupancy areas listed above seem to be the most
+occupied at night. 
 
 ![alt text][outputimage2]
-[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size"
+[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.pdf "Occupancy by color and size"
 
 ![alt text][outputimage3]
-[outputimage3]: https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.png "Occupancy bar graph"
+[outputimage3]: https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.pdf "Occupancy bar graph"

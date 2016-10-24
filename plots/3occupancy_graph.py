@@ -10,6 +10,8 @@ def plot_occupancy(occupancy_data):
     plt.title("Average Occupancy by Station Number")
     plt.xlabel("Station Number")
     plt.ylabel("Average Occupancy (bikes / (bikes + docks))")
+    plt.xlim(0, 225)
+    plt.savefig('../diagrams/3occupancy_graph.pdf')
     plt.show()
 
 

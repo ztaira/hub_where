@@ -82,7 +82,7 @@ def plot_station_locations_and_activity(station_coords, station_activity):
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/1activity_by_size_and_color.png')
+    plt.savefig('../diagrams/1activity_by_color_and_size.png')
 
     # plt.show()
 

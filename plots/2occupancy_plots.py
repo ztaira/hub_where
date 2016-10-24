@@ -85,9 +85,6 @@ def get_single_station_occupancy(station_number, array_length):
                 line_counter += 1
     except FileNotFoundError:
         pass
-    for index in range(len(single_station_occupancy_array)):
-        if single_station_occupancy_array[0][index] == 2:
-            single_station_occupancy_array[0][index] = single_station_occupancy_array[0][index-1]
     print("Returned data for station:", station_number, "\n")
     return single_station_occupancy_array
 

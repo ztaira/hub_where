@@ -4,15 +4,15 @@ import matplotlib.pyplot as plt
 
 def plot_occupancy(occupancy_data):
     """Plots station occupancy"""
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(16, 12), dpi=120)
     ax.bar(occupancy_data[0], occupancy_data[1], width=1, color='b')
     plt.ylim([0, 1])
     plt.title("Average Occupancy by Station Number")
     plt.xlabel("Station Number")
     plt.ylabel("Average Occupancy (bikes / (bikes + docks))")
     plt.xlim(0, 225)
-    plt.savefig('../diagrams/3occupancy_graph.pdf')
-    plt.show()
+    plt.savefig('../diagrams/3occupancy_graph.png')
+    # plt.show()
 
 
 def get_occupancy_data():

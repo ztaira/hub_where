@@ -64,7 +64,7 @@ If you look carefully, you can see the Charles River's outline wandering
 through the center of all the Hubway stations.  
 
 ![alt text][outputimage]
-[outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.pdf "Activity by color and size"
+[outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.png "Activity by color and size"
 
 ### Hubway Stations Plotted by Average Occupancy from 10/3/16 to 10/10/16
 
@@ -82,7 +82,7 @@ shown in these graphs, the low-occupancy areas listed above seem to be the most
 occupied at night. 
 
 ![alt text][outputimage2]
-[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.pdf "Occupancy by color and size"
+[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size"
 
 ![alt text][outputimage3]
-[outputimage3]: https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.pdf "Occupancy bar graph"
+[outputimage3]: https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.png "Occupancy bar graph"

@@ -114,39 +114,39 @@ def plot_station_locations_and_occupancy(station_coords, station_occupancies):
     """Takes a list of station coordinates and plots it"""
 
     # for size
-    plt.figure()
-    station_occupancies_scaled = [400*x for x in station_occupancies]
+    plt.figure(figsize=(16, 12), dpi=120)
+    station_occupancies_scaled = [1000*x for x in station_occupancies]
     plt.scatter(station_coords[2], station_coords[1], s=station_occupancies_scaled)
     plt.title("Hubway Stations by Average Occupancy (Size)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_size.pdf')
+    plt.savefig('../diagrams/2occupancy_by_size.png')
 
     # for color:
-    plt.figure()
-    colorline = cm.rainbow(np.linspace(0, 1, 501))
+    plt.figure(figsize=(16, 12), dpi=120)
+    colorline = cm.rainbow(np.linspace(0, 1, 1001))
     station_colormap = [colorline[int(x)] for x in station_occupancies_scaled]
-    plt.scatter(station_coords[2], station_coords[1], s=120, c=station_colormap)
+    plt.scatter(station_coords[2], station_coords[1], s=400, c=station_colormap)
     plt.title("Hubway Stations by Average Occupancy (Color)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_color.pdf')
+    plt.savefig('../diagrams/2occupancy_by_color.png')
 
     # for size and color
-    plt.figure()
+    plt.figure(figsize=(16, 12), dpi=120)
     plt.scatter(station_coords[2], station_coords[1], s=station_occupancies_scaled, c=station_colormap)
     plt.title("Hubway Stations by Average Occupancy (Size and Color)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/2occupancy_by_color_and_size.pdf')
+    plt.savefig('../diagrams/2occupancy_by_color_and_size.png')
 
-    plt.show()
+    # plt.show()
 
 
 if __name__ == "__main__":

@@ -52,39 +52,39 @@ def parse_station_coordinates(station_info):
 def plot_station_locations_and_activity(station_coords, station_activity):
     """Takes a list of station coordinates and plots it"""
     # for size
-    plt.figure()
-    station_activity = [0.2*x for x in station_activity]
+    plt.figure(figsize=(16, 12), dpi=120)
+    station_activity = [0.7*x for x in station_activity]
     plt.scatter(station_coords[2], station_coords[1], s=station_activity)
     plt.title("Hubway Stations by Activity Level (Size)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/1activity_by_size.pdf')
+    plt.savefig('../diagrams/1activity_by_size.png')
 
     # for color
-    plt.figure()
+    plt.figure(figsize=(16, 12), dpi=120)
     colorline = cm.rainbow(np.linspace(0, 1, max(station_activity)+1))
     station_colormap = [colorline[x] for x in station_activity]
-    plt.scatter(station_coords[2], station_coords[1], s=250, c=station_colormap)
+    plt.scatter(station_coords[2], station_coords[1], s=350, c=station_colormap)
     plt.title("Hubway Stations by Activity Level (Color)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/1activity_by_color.pdf')
+    plt.savefig('../diagrams/1activity_by_color.png')
 
     # for size and color:
-    plt.figure()
+    plt.figure(figsize=(16, 12), dpi=120)
     plt.scatter(station_coords[2], station_coords[1], s=station_activity, c=station_colormap)
     plt.title("Hubway Stations by Activity Level (Color and Size)")
     plt.xlabel("Longitude")
     plt.ylabel("Latitude")
     plt.ylim(42.25, 42.45)
     plt.gca().set_aspect('equal', adjustable='box')
-    plt.savefig('../diagrams/1activity_by_size_and_color.pdf')
+    plt.savefig('../diagrams/1activity_by_size_and_color.png')
 
-    plt.show()
+    # plt.show()
 
 
 if __name__ == "__main__":

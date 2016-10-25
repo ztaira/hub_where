@@ -70,18 +70,20 @@ through the center of all the Hubway stations.
 
 Despite having vastly different amounts of activity, there were no stations
 that remained empty or full throughout the entire week. Most of them were
-about 20% to 70% full at any given time. If you look at the plot, though,
+about 20% to 70% full at any given time. Judging by the plot,
 the stations in terms of average occupancy are extremely close together
 relative to the amount of activity each one gets.
 
 On average, the least occupied Hubway areas are on the MIT side of the Charles,
 by the Boston's Children's Museum, and by the Boston's Children's Hospital/Harvard
-Medical School/Massachusetts College of Art and Design. 
+Medical School/Massachusetts College of Art and Design. This is when the average
+is taken over the entire week.
 
-In the diagrams directory, there are also additional plots that show an
-hour-by-hour graph of how occupied each Hubway station is. Based on trends
-shown in these graphs, the low-occupancy areas listed above seem to be the most
-occupied at night. 
+When the average is taken on an hour-by-hour basis, we see much greater
+fluctuations in the occupancy levels of the Hubway stations. Notably, the bikes
+are stationary from about 7 PM to 7 AM. You can see the occupancy-over-time
+data in video format
+[here.](https://www.youtube.com/watch?v=L21rdhC-Bko&feature=youtu.be "Hubway data visualization")
 
 ![alt text][outputimage2]
 [outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size"

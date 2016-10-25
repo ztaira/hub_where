@@ -15,26 +15,31 @@ which Hubway stations see the most activity and which Hubway stations are
 more full on average.
 
 ### Usage:
-- (11) Use `python hub_where.py` to run the hub\_where.py file
-- (12) Use `python plots/filename.py` to generate the plots in the diagrams
+- Use `python hub_where.py` to run the hub\_where.py file
+- Use `python plots/filename.py` to generate the plots in the diagrams
 directory
 
 ### Features:
-- (11) Uses python to gather and save data via Hubway's station\_status URL
-- (11) Only saves data when `last_reported` field has changed
-- (11) Shortens dict keys in order to save space
-- (12) Numerous graph options: size, color, and both
+- Uses python to gather and save data via Hubway's station\_status URL
+- Only saves data when `last_reported` field has changed
+- Shortens dict keys in order to save space
+- Numerous graph options: size, color, and both
 
 ### What it does:
-- (11) If `last_updated.txt` file does not exist, creates `last_updated.txt` as well
+- If `last_updated.txt` file does not exist, creates `last_updated.txt` as well
     as log files for each station
-- (11) Checks every 60 seconds if the data has been updated
-- (11) If the data has been updated, log any new data in the station log files
-- (11) Only add to the station log files if necessary in order to save space
-- (12) `1activity_plots.py` calculates station activity based on log file size
+- Checks every 60 seconds if the data has been updated
+- If the data has been updated, log any new data in the station log files
+- Only add to the station log files if necessary in order to save space
+- `1activity_plots.py` calculates station activity based on log file size
 and plots it by size, color, and both
-- (12) `2occupancy_plots.py` calculates a weighted average of station occupancy
-and plots it by size, color, and both
+- `2occupancy_plots.py` calculates the average station occupancy
+    and plots it by size, color, and both
+- `3occupancy_graph.py` calculates the average station occupancy and plots it
+    as a bar graph
+- `4occupancy_over_time.py` generates images for hourly average occupancy for
+    the duration of the experiment
+- [Video of data visualisation](https://www.youtube.com/watch?v=L21rdhC-Bko&feature=youtu.be "Hubway Data Visualization")
 
 ### What it doesn't do:
 - N/A

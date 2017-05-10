@@ -68,8 +68,7 @@ the station by MIT's famous Alchemist statue at the end of the Smoot Bridge.
 If you look carefully, you can see the Charles River's outline wandering
 through the center of all the Hubway stations.  
 
-![alt text][outputimage]
-[outputimage]: https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.png "Activity by color and size"
+![alt text](https://github.com/ztaira14/hub_where/blob/master/diagrams/1activity_by_color_and_size.png "Activity by color and size")
 
 ### Hubway Stations Plotted by Average Occupancy from 10/3/16 to 10/10/16
 
@@ -90,8 +89,6 @@ are stationary from about 7 PM to 7 AM. You can see the occupancy-over-time
 data in video format
 [here.](https://www.youtube.com/watch?v=L21rdhC-Bko&feature=youtu.be "Hubway data visualization")
 
-![alt text][outputimage2]
-[outputimage2]: https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size"
+![alt text](https://github.com/ztaira14/hub_where/blob/master/diagrams/2occupancy_by_color_and_size.png "Occupancy by color and size")
 
-![alt text][outputimage3]
-[outputimage3]: https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.png "Occupancy bar graph"
+![alt text](https://github.com/ztaira14/hub_where/blob/master/diagrams/3occupancy_graph.png "Occupancy bar graph")
